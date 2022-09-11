@@ -12,6 +12,9 @@ const handleSubmit = (event) => {
     loginData.email= email.value;
     loginData.password = password.value;
     console.log(loginData);
+
+   event.currentTarget.reset();
+    
     // console.log(event);
     // console.log(email.value);
     // console.log(password.value);

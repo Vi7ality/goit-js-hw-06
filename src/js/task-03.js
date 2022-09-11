@@ -24,6 +24,24 @@ const markup = images
   .join("")
 console.log(markup);
 
-galleryEl.insertAdjacentHTML("beforeend", markup)
+galleryEl.insertAdjacentHTML("beforeend", markup);
 
-galleryEl.classList.add('gallery-js')
+galleryEl.classList.add('gallery-js');
+
+
+const headRef = document.querySelector('head');
+
+const style = `<style>
+      .gallery-js {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        list-style: none;
+      }
+
+      .picture-js {
+        max-width: 100vw;
+      }
+    </style>`
+
+headRef.insertAdjacentHTML('beforeend', style)
